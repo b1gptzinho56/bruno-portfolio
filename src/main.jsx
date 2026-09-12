@@ -14,7 +14,7 @@ const nav = [['Projetos','projetos'],['Serviços','servicos'],['Processo','proce
 function Arrow({diagonal=false}) { return <span aria-hidden="true">{diagonal?'↗':'↗'}</span> }
 function ProjectScreen({project, hero=false}) {
  const [failed,setFailed] = useState(false);
- return <div className={`screen ${project.id}`} style={{'--project':project.color}}><div className="screen-bar"><span className="window-dots" aria-hidden="true">● ● ●</span><span>{new URL(project.url).hostname}</span><span aria-hidden="true">↗</span></div>{!failed ? <img src={`/projects/${project.id}.webp`} alt={`Captura do site ${project.name} ${project.suffix}`} width="1440" height="900" loading={hero?'eager':'lazy'} decoding="async" onError={()=>setFailed(true)}/> : <div className="project-cover"><span>PROJETO DEMONSTRATIVO</span><strong>{project.name}<br/><em>{project.suffix}</em></strong><span>Conheça o projeto ao vivo ↗</span></div>}</div>
+ return <div className={`screen ${project.id}`} style={{'--project':project.color}}><div className="screen-bar"><span className="window-dots" aria-hidden="true">● ● ●</span><span>{new URL(project.url).hostname}</span><span aria-hidden="true">↗</span></div>{!failed ? <img src={`${import.meta.env.BASE_URL}projects/${project.id}.webp`} alt={`Captura do site ${project.name} ${project.suffix}`} width="1440" height="900" loading={hero?'eager':'lazy'} decoding="async" onError={()=>setFailed(true)}/> : <div className="project-cover"><span>PROJETO DEMONSTRATIVO</span><strong>{project.name}<br/><em>{project.suffix}</em></strong><span>Conheça o projeto ao vivo ↗</span></div>}</div>
 }
 function ContactForm() {
  const [draft,setDraft] = useState(''); const [status,setStatus] = useState(''); const output=useRef(null);
