@@ -42,3 +42,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}@media(hover:none){.hero-screen,.project-image .screen{animation:none}.button:hover{transform:none}}
 /* Readable service copy and accessible mobile form controls. */
 .service p,.benefit-list p,.project-body>p,.process-grid p,.about-copy>p{font-size:1rem}.case-details p,.category,.desktop-nav,.project-link,.form-note,.contact-form label,.footer-top nav{font-size:.875rem}.contact-form input,.contact-form select,.contact-form textarea{font-size:1rem}.service h4{font-size:.875rem}.case-details h4{font-size:.875rem}.screen-bar,.project-image-caption,.visual-caption{font-variant-numeric:tabular-nums}
+
+/* Keep the Brasa 77 portfolio preview fully visible on small screens. */
+.project-brasa .screen img{aspect-ratio:auto;object-fit:contain;object-position:left top;background:#161412}
